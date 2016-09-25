@@ -1,0 +1,307 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/* 
+    Created on : 2016-09-18 21:11
+    Author     : hxss
+*/
+
+// ########## H E A D E R ##########
+
+@media (max-width: 1030px) {
+	
+	body > header {
+		.wrapper {
+			flex-direction: row;
+			
+			.logo {
+				position: static;
+				height: auto;
+				
+			}
+		
+			> *:not(.logo) {
+				padding: 0;
+				flex-grow: 1;
+			}
+			
+			.phones {
+				justify-content: space-between;
+				
+				> *:not(:first-child) {
+					margin-left: 1em;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 865px) {
+	
+	body > header {
+		
+		.wrapper {
+			
+			.logo {
+				flex-grow: 1;
+				padding: 0;
+			}
+		
+			.more {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 660px) {
+	
+	body {
+		padding-top: 7.7rem;
+	
+		> header {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 7.7rem;
+			background-color: #fff;
+
+			.wrapper {
+
+				.phones {
+					display: none;
+				}
+
+				.main-menu {
+					position: fixed;
+					left: 0;
+					top: 7.7rem;
+					
+					display: none;
+					flex-direction: column;
+
+					min-width: 100%;
+					height: auto;
+					padding: 2rem;
+					background-color: rgba(255, 255, 255, .8);
+					border: 0;
+					
+					box-shadow: 0 .3rem .5rem rgba(1, 1, 1, 0.2);
+
+					&:hover {
+						display: flex;
+					}
+
+					a {
+						font-size: 3rem;
+						margin-top: 1.5rem;
+
+						&:not(:first-child) {
+							margin-left: 0em;
+						}
+					}
+				}
+
+				.menu-spoiler {
+					flex-grow: 0;
+					align-self: center;
+
+					width: 5rem;
+					height: 5rem;
+					padding: 0;
+					border: none;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: stretch;
+
+					&:hover {
+						cursor: pointer;
+
+						> * {
+							background-color: $clr-blue-1;
+						}
+					}
+
+					> * {
+						width: 100%;
+						height: 1rem;
+						border-radius: .3rem;
+						background-color: $clr-blue-3;
+
+						&:not(:first-child) {
+							margin-top: 1rem;
+						}
+					}
+
+					&:focus + .main-menu {
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}
+
+// ########## C O N T E N T ##########
+
+@media (max-width: 1095px) {
+	
+	section article.pluses {
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 950px) {
+	
+	.btn.cons {
+		position: static;
+		margin-top: 2rem;
+	}
+	
+	section {
+		background-size: auto 100%;
+		
+		&:not(:first-of-type) {
+			
+			article {
+				flex-wrap: wrap;
+			}
+			
+			img {
+				display: none;
+			}
+
+			.img:empty {
+				display: none;
+			}
+		}
+		
+		&.own-cloud {
+			background-size: 0;
+			
+			.hr p:last-child {
+				margin-right: 0;
+			}
+			
+			.img {
+				padding-top: 0;
+				text-align: left;
+				
+				p:first-child {
+					margin-left: 0;
+				}
+				
+				p:last-child {
+					margin-left: 0;
+				}
+			}
+		}
+		
+		article.contacts h1 {
+			max-width: none;
+			white-space: normal;
+		}
+	}
+	
+}
+
+@media (max-width: 590px) {
+	
+	section {
+		
+		&.main-carousel {
+			display: none;
+		}
+		
+		header {
+			
+			.btn {
+				width: auto;
+			}
+		}
+	}
+	
+}
+
+// T - A - B - L - E - ! - ! - !
+
+@media (max-width: 800px) {
+	
+	section article table {
+		position: relative;
+		display: block;
+		margin: 0;
+		border-left: 2rem solid transparent;
+		border-right: 2rem solid transparent;
+		background-color: transparent;
+
+		tbody {
+			display: block;
+			height: 30rem;
+			overflow: hidden;
+		}
+
+		.btn {
+			display: inline-block;
+		}
+	}
+	
+	section:not(.table-view) article table .btn {
+		left: 0;
+		top: 0;
+		border-radius: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .5);
+		text-shadow: .15em .15em .15em #000;
+
+		&:before {
+			content: 'Нажмите для просмотра таблицы';
+		}
+	}
+	
+	.table-view {
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		overflow: scroll;
+		
+		article {
+			display: block;
+			padding: 2rem;
+			max-width: none;
+			width: auto;
+			height: auto;
+			min-width: 94rem;
+			
+			table {
+				display: table;
+					
+				.btn {
+					left: 2rem;
+					top: 1rem;
+					width: auto;
+					padding: 0 1.5rem;
+
+					&:before {
+						content: 'Вернуться';
+					}
+				}
+				
+				tbody {
+					display: table-row-group;
+				}
+			}
+		}
+	}
+}

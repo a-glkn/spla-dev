@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/* 
+    Created on : 2016-09-18 21:09
+    Author     : hxss
+*/
+
+@charset 'utf-8';
+
+@font-face {
+	font-family: Museo Sans th;
+	src: url('../fonts/MuseoSansCyrl-300_0.eot') format('embedded-opentype'),
+	     url('../fonts/MuseoSansCyrl-300_0.woff') format('woff'),
+	     url('../fonts/MuseoSansCyrl-300_0.otf') format("truetype");
+}
+@font-face {
+	font-family: Museo Sans fh;
+	src: url('../fonts/MuseoSansCyrl-500_0.eot') format('embedded-opentype'),
+	     url('../fonts/MuseoSansCyrl-500_0.woff') format('woff'),
+	     url('../fonts/MuseoSansCyrl-500_0.otf') format("truetype");
+}
+@font-face {
+	font-family: Museo Sans nh;
+	src: url('../fonts/MuseoSansCyrl-900_0.eot') format('embedded-opentype'),
+	     url('../fonts/MuseoSansCyrl-900_0.woff') format('woff'),
+	     url('../fonts/MuseoSansCyrl-900_0.otf') format("truetype");
+}
+@font-face {
+	font-family: Ubuntu Regular;
+	src: url('../fonts/Ubuntu-R.eot') format('embedded-opentype'),
+	     url('../fonts/Ubuntu-R.woff') format('woff'),
+	     url('../fonts/Ubuntu-R.ttf') format("truetype");
+}
+
+$clr-grey-0: #333;
+$clr-grey-1: #4f4f4f;
+$clr-grey-2: #666;
+$clr-grey-3: #7f7f7f;
+$clr-grey-4: #dfdfdf;
+$clr-grey-5: #ececec;
+$clr-grey-6: #f4f4f4;
+$clr-grey-7: #f6f6f6;
+
+$clr-blue-0: #091e39;
+$clr-blue-1: #3e93d4;
+$clr-blue-2: #44a7ee;
+$clr-blue-3: #46a5ed;
+$clr-blue-4: #69b6f0;
+
+$clr-orange-0: #db5c05;
+$clr-orange-1: #f57e2e;
+$clr-orange-2: #fc8738;
