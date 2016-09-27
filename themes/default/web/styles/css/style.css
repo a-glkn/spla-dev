@@ -184,7 +184,7 @@ body > header {
       display: block;
       width: 0;
       height: 999rem;
-      }
+      border-left: 1px dashed red; }
     body > header .wrapper:after {
       left: auto;
       right: 2rem; }

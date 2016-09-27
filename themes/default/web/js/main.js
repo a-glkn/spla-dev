@@ -3,7 +3,7 @@ var $jq = jQuery.noConflict();
 $jq(window).load(function(event){
 	
 	var sl2shCor = 3;
-	var sl2scCor = 1;
+	var sl2scCor = 3;
 	var sl2shMSer = 6;
 	
 	if ($jq(window).width() < 680) {
